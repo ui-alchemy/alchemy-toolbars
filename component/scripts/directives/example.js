@@ -13,6 +13,6 @@ alchemy.directive('exampleDirective', function(){
         controller : function($scope, $element){
         },
 
-        template: '<div class="example">This is my example, in orange.</div>'
+        template: '<div class="example">This is my example, in orange!</div>'
     };
 });

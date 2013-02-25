@@ -33,6 +33,10 @@ module.exports = function (grunt) {
         files: ['app/styles/{,*/}*.{scss,sass}', 'component/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
       },
+      templates: {
+        files: ['component/templates/*.html', 'app/views/*.html'],
+        tasks: 'html2js:directives'
+      },
       livereload: {
         files: [
           'app/{,*/}*.html',
@@ -56,7 +60,7 @@ module.exports = function (grunt) {
             return [
               lrSnippet,
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'component'),
+              mountFolder(connect, ''),
               mountFolder(connect, yeomanConfig.app)
             ];
           }
@@ -68,7 +72,8 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')
+              mountFolder(connect, 'test'),
+              mountFolder(connect, 'component')
             ];
           }
         }
@@ -130,6 +135,9 @@ module.exports = function (grunt) {
           debugInfo: true
         }
       }
+    },
+    html2js: {
+      directives: ['component/templates/*.html', 'app/views/*.html'],
     },
     concat: {
       dist: {
@@ -237,6 +245,26 @@ module.exports = function (grunt) {
     }
   });
 
+  var escapeContent = function(content) {
+    return content.replace(/"/g, '\\"').replace(/\n/g, '" +\n    "');
+  };
+
+  grunt.registerMultiTask('html2js', 'Generate js version of html template.', function() {
+    var files = grunt._watch_changed_files || grunt.file.expand(this.data);
+
+    files.forEach(function(file) {
+      var content  = escapeContent(grunt.file.read(file)),
+          template = "";
+
+      template += 'angular.module("' + file + '", []).run(function($templateCache) {\n';
+      template += '  $templateCache.put("' + file + '",\n';
+      template += '    "' + content + '");\n';
+      template += '});\n';
+
+      grunt.file.write(file + '.js', template);
+    });
+  });
+
   grunt.renameTask('regarde', 'watch');
   // remove when mincss task is renamed
   grunt.renameTask('mincss', 'cssmin');
@@ -245,6 +273,7 @@ module.exports = function (grunt) {
     'clean:server',
     'coffee:dist',
     'compass:server',
+    'html2js',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -255,6 +284,7 @@ module.exports = function (grunt) {
     'clean:server',
     'coffee',
     'compass',
+    'html2js',
     'connect:test',
     'testacular'
   ]);

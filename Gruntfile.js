@@ -78,7 +78,7 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      dist: ['.tmp', 'dist/*'],
+      dist: ['.tmp', 'dist/*.js', 'dist/*.scss', 'dist/*.css'],
       server: '.tmp'
     },
     jshint: {
@@ -106,7 +106,13 @@ module.exports = function (grunt) {
         importPath: ['app/components', 'component/styles'],
         relativeAssets: true
       },
-      dist: {},
+      dist: {
+        files: {
+          'dist/tables.scss' : [
+            'component/styles/**/*.scss'
+          ]
+        }
+      },
       server: {
         options: {
           debugInfo: true
@@ -152,7 +158,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          'dist/main.css': [
+          'dist/tables.css': [
             '.tmp/styles/{,*/}*.css',
             'app/styles/{,*/}*.css'
           ]
@@ -213,6 +219,16 @@ module.exports = function (grunt) {
           dest: 'dist',
           src: [
             '*.{ico,txt}',
+            '*.{ico,txt}'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: 'component/styles',
+          dest: 'dist',
+          src: [
+            './**/*.scss'
           ]
         }]
       }

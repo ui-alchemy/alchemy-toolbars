@@ -11,7 +11,8 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    componentName: 'example'
   };
 
   try {
@@ -21,14 +22,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
-      coffee: {
-        files: ['app/scripts/{,*/}*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
       compass: {
         files: ['app/styles/{,*/}*.{scss,sass}', 'component/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass']
@@ -94,7 +87,6 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        'app/scripts/{,*/}*.js',
         'component/scripts/{,*/}*.js'
       ]
     },
@@ -102,21 +94,6 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'testacular.conf.js',
         singleRun: true
-      }
-    },
-    coffee: {
-      dist: {
-        files: {
-          '.tmp/scripts/coffee.js': 'app/scripts/*.coffee'
-        }
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/spec',
-          src: '*.coffee',
-          dest: 'test/spec'
-        }]
       }
     },
     compass: {
@@ -142,10 +119,9 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          'dist/scripts/scripts.js': [
-            '.tmp/scripts/*.js',
-            'app/scripts/*.js',
-            'component/scripts/*.js'
+          'dist/example.js': [
+            'component/scripts/**/*.js',
+            'component/templates/*.js'
           ]
         }
       }
@@ -176,7 +152,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: {
-          'dist/styles/main.css': [
+          'dist/main.css': [
             '.tmp/styles/{,*/}*.css',
             'app/styles/{,*/}*.css'
           ]
@@ -237,8 +213,6 @@ module.exports = function (grunt) {
           dest: 'dist',
           src: [
             '*.{ico,txt}',
-            '.htaccess',
-            'components/**/*'
           ]
         }]
       }
@@ -254,7 +228,7 @@ module.exports = function (grunt) {
 
     files.forEach(function(file) {
       var content  = escapeContent(grunt.file.read(file)),
-          template = "";
+          template = '';
 
       template += 'angular.module("' + file + '", []).run(function($templateCache) {\n';
       template += '  $templateCache.put("' + file + '",\n';
@@ -271,7 +245,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
-    'coffee:dist',
     'compass:server',
     'html2js',
     'livereload-start',
@@ -282,7 +255,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'coffee',
     'compass',
     'html2js',
     'connect:test',
@@ -293,18 +265,17 @@ module.exports = function (grunt) {
     'clean:dist',
     'jshint',
     'test',
-    'coffee',
     'compass:dist',
-    'useminPrepare',
-    'imagemin',
+    'html2js',
+    //'useminPrepare',
+    //'imagemin',
     'cssmin',
-    'htmlmin',
     'concat',
     'copy',
-    'cdnify',
-    'usemin',
-    'ngmin',
-    'uglify'
+    //'cdnify',
+    //'usemin',
+    //'ngmin',
+    //'uglify'
   ]);
 
   grunt.registerTask('default', ['build']);

@@ -10,9 +10,6 @@ alchemy.directive('exampleDirective', function(){
         restrict    : 'A',
         transclude  : true,
 
-        controller : function($scope, $element){
-        },
-
         template: '<div class="example">This is my example, in orange!</div>'
     };
 });

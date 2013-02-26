@@ -1,9 +1,11 @@
 'use strict';
 
 describe('Directive: Example', function () {
+  var element;
+  
   beforeEach(module('componentExampleApp'));
 
-  var element;
+  beforeEach(module('component/templates/example_directive_template.html'));
 
   it('should make hidden element visible', inject(function ($rootScope, $compile) {
     element = angular.element('<blah></blah>');

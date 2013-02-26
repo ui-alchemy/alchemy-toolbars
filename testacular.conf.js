@@ -7,10 +7,11 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+
+  'app/components/jquery/jquery.js',
   'app/components/angular/angular.js',
   'app/components/angular-mocks/angular-mocks.js',
 
-  'app/scripts/**/*.js',
   'component/scripts/**/*.js',
 
   'app/views/**/*.html',

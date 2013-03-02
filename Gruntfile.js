@@ -12,7 +12,7 @@ module.exports = function (grunt) {
   var yeomanConfig = {
     app: 'app',
     dist: 'dist',
-    component: 'example'
+    component: require('./dist/component.json').name
   };
 
   try {

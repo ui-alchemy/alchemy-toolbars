@@ -1,5 +1,5 @@
 {
-  "name": "INSERT COMPONENT NAME HERE",
+  "name": "example",
   "version": "0.0.0",
   "main" : ["./*.js", "./*.scss", "./*.css"],
   "dependencies": {

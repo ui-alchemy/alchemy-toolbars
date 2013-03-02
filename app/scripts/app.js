@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('componentExampleApp', ['alchemy'])
+angular.module('componentExampleApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

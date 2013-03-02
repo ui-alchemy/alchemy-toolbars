@@ -3,9 +3,7 @@
 'use strict';
 
 
-var alchemy = angular.module('alchemy', []);
-    
-alchemy.directive('exampleDirective', function(){
+angular.module('example', []).directive('exampleDirective', function(){
     return {
         restrict    : 'A',
         transclude  : true,

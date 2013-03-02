@@ -94,6 +94,11 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'testacular.conf.js',
         singleRun: true
+      },
+      ci: {
+        configFile: 'testacular.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS', 'Firefox']
       }
     },
     compass: {
@@ -126,8 +131,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/example.js': [
-            'component/scripts/**/*.js',
-            'component/templates/*.js'
+            'component/templates/*.js', //must be first
+            'component/scripts/**/*.js'
           ]
         }
       }
@@ -246,7 +251,7 @@ module.exports = function (grunt) {
       var content  = escapeContent(grunt.file.read(file)),
           template = '';
 
-      template += 'angular.module("' + file + '", []).run(function($templateCache) {\n';
+      template += 'angular.module("alch-templates").run(function($templateCache) {\n';
       template += '  $templateCache.put("' + file + '",\n';
       template += '    "' + content + '");\n';
       template += '});\n';
@@ -269,13 +274,22 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('test', [
-    'clean:server',
-    'compass',
-    'html2js',
-    'connect:test',
-    'testacular'
-  ]);
+  grunt.registerTask('test', function(arg1){
+    var task_list = [
+      'clean:server',
+      'compass',
+      'html2js',
+      'connect:test'
+    ];
+
+    if (arg1 === 'ci') {
+      task_list.push('testacular:ci');
+    } else {
+      task_list.push('testacular:unit');
+    }
+
+    grunt.task.run(task_list);
+  });
 
   grunt.registerTask('build', [
     'clean:dist',

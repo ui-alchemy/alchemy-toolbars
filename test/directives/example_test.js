@@ -3,7 +3,7 @@
 describe('Directive: Example', function () {
   var element;
   
-  beforeEach(module('componentExampleApp'));
+  beforeEach(module('example'));
 
   beforeEach(module('component/templates/example_directive_template.html'));
 

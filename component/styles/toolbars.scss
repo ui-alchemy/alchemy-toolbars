@@ -1,0 +1,45 @@
+@import "_vars_toolbars";
+
+.nav-container {
+  background-color:$nav-container-bgcolor;
+  border:$nav-container-border;
+  padding:5px;
+  button {margin-top:0;}
+  /* Horizontal */
+  .nav {
+    display:block;
+    list-style-type:none;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    width:100%;
+    li {display:inline;}
+    li.right {float:right;}
+    li.left {float:left;}
+    .nav-group {
+      display:inline;
+      white-space:nowrap;
+      &.left {float:left;}
+      &.right {float:right;}
+      li {
+        display:inline-block;
+        float:none;
+      }
+    }
+    /* Vertical */
+    .nav-stacked {
+      display:block;
+      z-index:100;
+      li {
+        display:block;
+        float:none;
+      }
+      .nav-fixed {
+        left:10px;
+        position:fixed;
+        top:10px;
+        z-index:100;
+      }
+    }
+  }
+}

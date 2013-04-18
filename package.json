@@ -1,5 +1,5 @@
 {
-  "name": "ENTER COMPONENT NAME HERE (e.g. alchemy-<name>)",
+  "name": "alchemy-toolbars",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {

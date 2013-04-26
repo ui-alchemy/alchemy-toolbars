@@ -1,0 +1,74 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+/* line 3, ../../app/styles/toolbars.scss */
+.nav-container {
+  background-color: #efefef;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  /* Horizontal */
+}
+/* line 7, ../../app/styles/toolbars.scss */
+.nav-container button {
+  margin-top: 0;
+}
+/* line 9, ../../app/styles/toolbars.scss */
+.nav-container .nav {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  /* Vertical */
+}
+/* line 16, ../../app/styles/toolbars.scss */
+.nav-container .nav li {
+  display: inline;
+}
+/* line 17, ../../app/styles/toolbars.scss */
+.nav-container .nav li.right {
+  float: right;
+}
+/* line 18, ../../app/styles/toolbars.scss */
+.nav-container .nav li.left {
+  float: left;
+}
+/* line 19, ../../app/styles/toolbars.scss */
+.nav-container .nav .nav-group {
+  display: inline;
+  padding-left: 0;
+  white-space: nowrap;
+}
+/* line 23, ../../app/styles/toolbars.scss */
+.nav-container .nav .nav-group.left {
+  float: left;
+}
+/* line 24, ../../app/styles/toolbars.scss */
+.nav-container .nav .nav-group.right {
+  float: right;
+}
+/* line 25, ../../app/styles/toolbars.scss */
+.nav-container .nav .nav-group:after {
+  clear: both;
+}
+/* line 26, ../../app/styles/toolbars.scss */
+.nav-container .nav .nav-group li {
+  display: inline-block;
+  float: none;
+}
+/* line 32, ../../app/styles/toolbars.scss */
+.nav-container .nav.nav-stacked {
+  display: block;
+  z-index: 100;
+}
+/* line 35, ../../app/styles/toolbars.scss */
+.nav-container .nav.nav-stacked li {
+  display: block;
+  float: none;
+}
+/* line 39, ../../app/styles/toolbars.scss */
+.nav-container .nav.nav-stacked .nav-fixed {
+  left: 10px;
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+}

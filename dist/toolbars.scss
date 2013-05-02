@@ -1,46 +1,29 @@
 @import "_toolbars_vars";
 
-.nav-container {
-  background-color:$nav-container-bgcolor;
-  border:$nav-container-border;
-  padding:5px;
-  button {margin-top:0;}
-  /* Horizontal */
-  .nav {
-    display:block;
-    list-style-type:none;
-    margin:0;
+.btn-toolbar {
+  background-color:$btn_toolbar_bgcolor;
+  overflow:hidden;
+  padding:$btn_toolbar_padding;
+  .btn-group {
+    display:inline-block;
+    margin-right:$btn_toolbar_group_spacing;
     overflow:hidden;
-    padding:0;
-    width:100%;
-    li {display:inline;}
-    li.right {float:right;}
-    li.left {float:left;}
-    .nav-group {
-      display:inline;
-      padding-left:0;
+    white-space:nowrap;
+    &:last-child {margin-right:0;}
+    .btn,button {
+      margin-top:0;
       white-space:nowrap;
-      &.left {float:left;}
-      &.right {float:right;}
-      li {
-        display:inline-block;
-        float:none;
-      }
     }
-    /* Vertical */
-    .nav-stacked {
+    &.pull-left {float:left;}
+    &.pull-right {float:right;}
+  }
+  &.btn-toolbar-vertical {
+    display:inline-block;
+    width:auto;
+    .btn-group {
       display:block;
-      z-index:100;
-      li {
-        display:block;
-        float:none;
-      }
-      .nav-fixed {
-        left:10px;
-        position:fixed;
-        top:10px;
-        z-index:100;
-      }
+      margin:0 0 $btn_toolbar_group_vertical_spacing 0;
+      &:last-child {margin-bottom:0;}
     }
   }
 }

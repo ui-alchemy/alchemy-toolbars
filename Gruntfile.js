@@ -113,6 +113,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
+          'dist/<%= yeoman.component %>.scss' : [
+            'component/styles/**/*.scss'
+          ]
         }
       },
       server: {
@@ -127,10 +130,10 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          'dist/<%= yeoman.component %>.js': [
-            'component/templates/*.js', //must be first
-            'component/scripts/**/*.js'
-          ],
+          //'dist/<%= yeoman.component %>.js': [
+          //  'component/templates/*.js', //must be first
+          //  'component/scripts/**/*.js'
+          //],
           'dist/<%= yeoman.component %>.css': [
             '.tmp/styles/main.css'
           ]

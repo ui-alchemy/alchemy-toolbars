@@ -1,74 +1,45 @@
 /* Will be compiled down to a single stylesheet with your sass files */
-/* line 3, ../../app/styles/toolbars.scss */
-.nav-container {
+/* line 3, ../../component/styles/toolbars.scss */
+.btn-toolbar {
   background-color: #efefef;
-  border: 1px solid #cccccc;
-  padding: 5px;
-  /* Horizontal */
-}
-/* line 7, ../../app/styles/toolbars.scss */
-.nav-container button {
-  margin-top: 0;
-}
-/* line 9, ../../app/styles/toolbars.scss */
-.nav-container .nav {
-  display: block;
-  list-style-type: none;
-  margin: 0;
   overflow: hidden;
-  padding: 0;
-  width: 100%;
-  /* Vertical */
+  padding: 10px;
 }
-/* line 16, ../../app/styles/toolbars.scss */
-.nav-container .nav li {
-  display: inline;
-}
-/* line 17, ../../app/styles/toolbars.scss */
-.nav-container .nav li.right {
-  float: right;
-}
-/* line 18, ../../app/styles/toolbars.scss */
-.nav-container .nav li.left {
-  float: left;
-}
-/* line 19, ../../app/styles/toolbars.scss */
-.nav-container .nav .nav-group {
-  display: inline;
-  padding-left: 0;
+/* line 7, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group {
+  display: inline-block;
+  margin-right: 10px;
+  overflow: hidden;
   white-space: nowrap;
 }
-/* line 23, ../../app/styles/toolbars.scss */
-.nav-container .nav .nav-group.left {
+/* line 12, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group:last-child {
+  margin-right: 0;
+}
+/* line 13, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group .btn, .btn-toolbar .btn-group button {
+  margin-top: 0;
+  white-space: nowrap;
+}
+/* line 17, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group.pull-left {
   float: left;
 }
-/* line 24, ../../app/styles/toolbars.scss */
-.nav-container .nav .nav-group.right {
+/* line 18, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group.pull-right {
   float: right;
 }
-/* line 25, ../../app/styles/toolbars.scss */
-.nav-container .nav .nav-group:after {
-  clear: both;
-}
-/* line 26, ../../app/styles/toolbars.scss */
-.nav-container .nav .nav-group li {
+/* line 20, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical {
   display: inline-block;
-  float: none;
+  width: auto;
 }
-/* line 32, ../../app/styles/toolbars.scss */
-.nav-container .nav.nav-stacked {
+/* line 23, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .btn-group {
   display: block;
-  z-index: 100;
+  margin: 0 0 10px 0;
 }
-/* line 35, ../../app/styles/toolbars.scss */
-.nav-container .nav.nav-stacked li {
-  display: block;
-  float: none;
-}
-/* line 39, ../../app/styles/toolbars.scss */
-.nav-container .nav.nav-stacked .nav-fixed {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 100;
+/* line 26, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .btn-group:last-child {
+  margin-bottom: 0;
 }

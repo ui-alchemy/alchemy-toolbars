@@ -1,45 +1,286 @@
 /* Will be compiled down to a single stylesheet with your sass files */
-/* line 3, ../../component/styles/toolbars.scss */
-.btn-toolbar {
+/* Horizontal Spacer sizes */
+/* Horizontal Divider options */
+/* Vertical Spacer sizes */
+/* Vertical Divider options */
+/* line 4, ../../component/styles/toolbars.scss */
+.btn-toolbar,
+.btn_toolbar {
   background-color: #efefef;
-  overflow: hidden;
   padding: 10px;
+  /* divider & spacer here */
 }
-/* line 7, ../../component/styles/toolbars.scss */
-.btn-toolbar .btn-group {
+/* line 9, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group,
+.btn-toolbar .btn_group,
+.btn_toolbar .btn-group,
+.btn_toolbar .btn_group {
   display: inline-block;
   margin-right: 10px;
-  overflow: hidden;
   white-space: nowrap;
 }
-/* line 12, ../../component/styles/toolbars.scss */
-.btn-toolbar .btn-group:last-child {
+/* line 14, ../../component/styles/toolbars.scss */
+.btn-toolbar .btn-group:last-child,
+.btn-toolbar .btn_group:last-child,
+.btn_toolbar .btn-group:last-child,
+.btn_toolbar .btn_group:last-child {
   margin-right: 0;
 }
-/* line 13, ../../component/styles/toolbars.scss */
-.btn-toolbar .btn-group .btn, .btn-toolbar .btn-group button {
-  margin-top: 0;
-  white-space: nowrap;
-}
-/* line 17, ../../component/styles/toolbars.scss */
-.btn-toolbar .btn-group.pull-left {
+/* line 19, ../../component/styles/toolbars.scss */
+.btn-toolbar .pull-left,
+.btn_toolbar .pull-left {
   float: left;
 }
-/* line 18, ../../component/styles/toolbars.scss */
-.btn-toolbar .btn-group.pull-right {
+/* line 23, ../../component/styles/toolbars.scss */
+.btn-toolbar .pull-right,
+.btn_toolbar .pull-right {
   float: right;
 }
-/* line 20, ../../component/styles/toolbars.scss */
-.btn-toolbar.btn-toolbar-vertical {
+/* line 28, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer,
+.btn_toolbar .spacer {
+  display: inline-block;
+  height: 15px;
+  width: 5px;
+}
+/* line 33, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer.mini,
+.btn_toolbar .spacer.mini {
+  width: 2px;
+}
+/* line 36, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer.small,
+.btn_toolbar .spacer.small {
+  width: 5px;
+}
+/* line 39, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer.default,
+.btn_toolbar .spacer.default {
+  width: 10px;
+}
+/* line 42, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer.large,
+.btn_toolbar .spacer.large {
+  width: 15px;
+}
+/* line 45, ../../component/styles/toolbars.scss */
+.btn-toolbar .spacer.huge,
+.btn_toolbar .spacer.huge {
+  width: 20px;
+}
+/* line 49, ../../component/styles/toolbars.scss */
+.btn-toolbar .divider,
+.btn_toolbar .divider {
+  background-color: white;
+  display: inline-block;
+  height: 36px;
+  width: 2px;
+  vertical-align: bottom;
+}
+/* line 58, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical, .btn-toolbar.btn_toolbar_vertical,
+.btn_toolbar.btn-toolbar-vertical,
+.btn_toolbar.btn_toolbar_vertical {
   display: inline-block;
   width: auto;
+  /* divider & spacer here */
 }
-/* line 23, ../../component/styles/toolbars.scss */
-.btn-toolbar.btn-toolbar-vertical .btn-group {
+/* line 63, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .btn-group,
+.btn-toolbar.btn-toolbar-vertical .btn_group, .btn-toolbar.btn_toolbar_vertical .btn-group,
+.btn-toolbar.btn_toolbar_vertical .btn_group,
+.btn_toolbar.btn-toolbar-vertical .btn-group,
+.btn_toolbar.btn-toolbar-vertical .btn_group,
+.btn_toolbar.btn_toolbar_vertical .btn-group,
+.btn_toolbar.btn_toolbar_vertical .btn_group {
   display: block;
   margin: 0 0 10px 0;
 }
-/* line 26, ../../component/styles/toolbars.scss */
-.btn-toolbar.btn-toolbar-vertical .btn-group:last-child {
+/* line 67, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .btn-group:last-child,
+.btn-toolbar.btn-toolbar-vertical .btn_group:last-child, .btn-toolbar.btn_toolbar_vertical .btn-group:last-child,
+.btn-toolbar.btn_toolbar_vertical .btn_group:last-child,
+.btn_toolbar.btn-toolbar-vertical .btn-group:last-child,
+.btn_toolbar.btn-toolbar-vertical .btn_group:last-child,
+.btn_toolbar.btn_toolbar_vertical .btn-group:last-child,
+.btn_toolbar.btn_toolbar_vertical .btn_group:last-child {
   margin-bottom: 0;
+}
+/* line 70, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .btn-group:after,
+.btn-toolbar.btn-toolbar-vertical .btn_group:after, .btn-toolbar.btn_toolbar_vertical .btn-group:after,
+.btn-toolbar.btn_toolbar_vertical .btn_group:after,
+.btn_toolbar.btn-toolbar-vertical .btn-group:after,
+.btn_toolbar.btn-toolbar-vertical .btn_group:after,
+.btn_toolbar.btn_toolbar_vertical .btn-group:after,
+.btn_toolbar.btn_toolbar_vertical .btn_group:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 78, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer, .btn-toolbar.btn_toolbar_vertical .spacer,
+.btn_toolbar.btn-toolbar-vertical .spacer,
+.btn_toolbar.btn_toolbar_vertical .spacer {
+  display: block;
+  height: 10px;
+  width: 15px;
+}
+/* line 83, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer.mini, .btn-toolbar.btn_toolbar_vertical .spacer.mini,
+.btn_toolbar.btn-toolbar-vertical .spacer.mini,
+.btn_toolbar.btn_toolbar_vertical .spacer.mini {
+  height: 2px;
+}
+/* line 86, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer.small, .btn-toolbar.btn_toolbar_vertical .spacer.small,
+.btn_toolbar.btn-toolbar-vertical .spacer.small,
+.btn_toolbar.btn_toolbar_vertical .spacer.small {
+  height: 5px;
+}
+/* line 89, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer.default, .btn-toolbar.btn_toolbar_vertical .spacer.default,
+.btn_toolbar.btn-toolbar-vertical .spacer.default,
+.btn_toolbar.btn_toolbar_vertical .spacer.default {
+  height: 10px;
+}
+/* line 92, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer.large, .btn-toolbar.btn_toolbar_vertical .spacer.large,
+.btn_toolbar.btn-toolbar-vertical .spacer.large,
+.btn_toolbar.btn_toolbar_vertical .spacer.large {
+  height: 15px;
+}
+/* line 95, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .spacer.huge, .btn-toolbar.btn_toolbar_vertical .spacer.huge,
+.btn_toolbar.btn-toolbar-vertical .spacer.huge,
+.btn_toolbar.btn_toolbar_vertical .spacer.huge {
+  height: 20px;
+}
+/* line 99, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .divider, .btn-toolbar.btn_toolbar_vertical .divider,
+.btn_toolbar.btn-toolbar-vertical .divider,
+.btn_toolbar.btn_toolbar_vertical .divider {
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 85%;
+}
+/* line 105, ../../component/styles/toolbars.scss */
+.btn-toolbar.btn-toolbar-vertical .divider.centered, .btn-toolbar.btn_toolbar_vertical .divider.centered,
+.btn_toolbar.btn-toolbar-vertical .divider.centered,
+.btn_toolbar.btn_toolbar_vertical .divider.centered {
+  margin: 0 auto;
+}
+/* line 112, ../../component/styles/toolbars.scss */
+.btn-toolbar:after,
+.btn_toolbar:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 4, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar,
+  .btn_toolbar {
+    background-color: #efefef;
+    padding: 10px;
+  }
+  /* line 9, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .btn-group,
+  .btn-toolbar .btn_group,
+  .btn_toolbar .btn-group,
+  .btn_toolbar .btn_group {
+    display: block;
+    float: none !important;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+  /* line 15, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .btn-group:last-child,
+  .btn-toolbar .btn_group:last-child,
+  .btn_toolbar .btn-group:last-child,
+  .btn_toolbar .btn_group:last-child {
+    margin-bottom: 0;
+  }
+  /* line 18, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .btn-group:after,
+  .btn-toolbar .btn_group:after,
+  .btn_toolbar .btn-group:after,
+  .btn_toolbar .btn_group:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  /* line 25, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .btn,
+  .btn_toolbar .btn {
+    display: block;
+  }
+  /* line 29, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .spacer,
+  .btn_toolbar .spacer {
+    display: none;
+  }
+  /* line 32, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar .divider,
+  .btn_toolbar .divider {
+    display: none;
+  }
+  /* line 37, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical, .btn-toolbar.btn_toolbar_vertical,
+  .btn_toolbar.btn-toolbar-vertical,
+  .btn_toolbar.btn_toolbar_vertical {
+    display: inline-block;
+    width: auto;
+  }
+  /* line 42, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical .btn-group,
+  .btn-toolbar.btn-toolbar-vertical .btn_group, .btn-toolbar.btn_toolbar_vertical .btn-group,
+  .btn-toolbar.btn_toolbar_vertical .btn_group,
+  .btn_toolbar.btn-toolbar-vertical .btn-group,
+  .btn_toolbar.btn-toolbar-vertical .btn_group,
+  .btn_toolbar.btn_toolbar_vertical .btn-group,
+  .btn_toolbar.btn_toolbar_vertical .btn_group {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  /* line 46, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical .btn-group:last-child,
+  .btn-toolbar.btn-toolbar-vertical .btn_group:last-child, .btn-toolbar.btn_toolbar_vertical .btn-group:last-child,
+  .btn-toolbar.btn_toolbar_vertical .btn_group:last-child,
+  .btn_toolbar.btn-toolbar-vertical .btn-group:last-child,
+  .btn_toolbar.btn-toolbar-vertical .btn_group:last-child,
+  .btn_toolbar.btn_toolbar_vertical .btn-group:last-child,
+  .btn_toolbar.btn_toolbar_vertical .btn_group:last-child {
+    margin-bottom: 0;
+  }
+  /* line 49, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical .btn-group:after,
+  .btn-toolbar.btn-toolbar-vertical .btn_group:after, .btn-toolbar.btn_toolbar_vertical .btn-group:after,
+  .btn-toolbar.btn_toolbar_vertical .btn_group:after,
+  .btn_toolbar.btn-toolbar-vertical .btn-group:after,
+  .btn_toolbar.btn-toolbar-vertical .btn_group:after,
+  .btn_toolbar.btn_toolbar_vertical .btn-group:after,
+  .btn_toolbar.btn_toolbar_vertical .btn_group:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  /* line 56, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical .spacer, .btn-toolbar.btn_toolbar_vertical .spacer,
+  .btn_toolbar.btn-toolbar-vertical .spacer,
+  .btn_toolbar.btn_toolbar_vertical .spacer {
+    display: block;
+    height: 20px;
+  }
+  /* line 60, ../../component/styles/_toolbars_responsive.scss */
+  .btn-toolbar.btn-toolbar-vertical .divider, .btn-toolbar.btn_toolbar_vertical .divider,
+  .btn_toolbar.btn-toolbar-vertical .divider,
+  .btn_toolbar.btn_toolbar_vertical .divider {
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 85%;
+  }
 }

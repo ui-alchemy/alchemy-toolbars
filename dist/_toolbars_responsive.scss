@@ -5,6 +5,11 @@
   background-color:$btn_toolbar_bgcolor;
   padding:$btn_toolbar_padding;
 
+  .btn {
+    display:block;
+    float:none !important;
+  }
+
   .btn-group,
   .btn_group {
     display:block;
@@ -20,10 +25,10 @@
         content: "";
         display: block;
     }
-  }
-
-  .btn {
-    display:block;
+    
+    .btn {
+      float:left !important;
+    }
   }
 
   .spacer {

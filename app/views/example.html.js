@@ -61,39 +61,49 @@ angular.module("alch-templates").run(function($templateCache) {
     "  <button class=\"btn\">Default</button>" +
     "  <button class=\"btn primary\">Primary</button>" +
     "  <button class=\"btn warning\">Warning</button>" +
+    "" +
     "  <span class=\"spacer huge\"></span>" +
     "  <span class=\"divider centered\"></span>" +
     "  <span class=\"spacer huge\"></span>" +
+    "" +
     "  <div class=\"btn-group\">" +
     "    <a class=\"btn\">Default</a>" +
     "    <button class=\"btn primary\">Primary</button>" +
     "    <input class=\"btn warning\" type=\"submit\" value=\"Warning\"/>" +
     "  </div>" +
-    "  <span class=\"spacer\"></span>" +
-    "  <span class=\"divider\"></span>" +
-    "  <span class=\"spacer\"></span>" +
-    "  <div class=\"btn-group\">" +
-    "    <a class=\"btn\">Default</a>" +
-    "    <button class=\"btn primary\">Primary</button>" +
-    "    <input class=\"btn warning\" type=\"submit\" value=\"Warning\"/>" +
-    "  </div>" +
-    "  <span class=\"spacer\"></span>" +
-    "  <span class=\"divider\"></span>" +
-    "  <span class=\"spacer\"></span>" +
-    "  <div class=\"btn-group\">" +
-    "    <a class=\"btn\">Default</a>" +
-    "    <button class=\"btn primary\">Primary</button>" +
-    "    <input class=\"btn warning\" type=\"submit\" value=\"Warning\"/>" +
-    "  </div>" +
+    "" +
     "  <span class=\"spacer\"></span>" +
     "  <span class=\"divider centered\"></span>" +
     "  <span class=\"spacer\"></span>" +
+    "" +
+    "  <div class=\"btn-group\">" +
+    "    <a class=\"btn\">Default</a>" +
+    "    <button class=\"btn primary\">Primary</button>" +
+    "    <input class=\"btn warning\" type=\"submit\" value=\"Warning\"/>" +
+    "  </div>" +
+    "" +
+    "  <span class=\"spacer\"></span>" +
+    "  <span class=\"divider centered\"></span>" +
+    "  <span class=\"spacer\"></span>" +
+    "" +
+    "  <div class=\"btn-group\">" +
+    "    <a class=\"btn\">Default</a>" +
+    "    <button class=\"btn primary\">Primary</button>" +
+    "    <input class=\"btn warning\" type=\"submit\" value=\"Warning\"/>" +
+    "  </div>" +
+    "" +
+    "  <span class=\"spacer huge\"></span>" +
+    "  <span class=\"divider centered\"></span>" +
+    "  <span class=\"spacer huge\"></span>" +
+    "" +
     "  <button class=\"btn\">Default</button>" +
     "  <button class=\"btn primary\">Primary</button>" +
     "  <button class=\"btn warning\">Warning</button>" +
-    "  <span class=\"spacer\"></span>" +
+    "" +
+    "  <span class=\"spacer huge\"></span>" +
     "  <span class=\"divider centered\"></span>" +
-    "  <span class=\"spacer\"></span>" +
+    "  <span class=\"spacer huge\"></span>" +
+    "" +
     "</div>" +
     "");
 });

@@ -1,5 +1,9 @@
-//This is where any styling specific to the component playground should go.
 @import "alchemy/alchemy";
 @import "alchemy-buttons/buttons";
 
-body {margin:0 !important;padding:0}
+html,
+body  {
+    margin: 0;
+    padding: 0;
+    font-size:  13px;
+}

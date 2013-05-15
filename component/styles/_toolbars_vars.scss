@@ -1,28 +1,15 @@
-$btn_toolbar_bgcolor:#efefef;
-$btn_toolbar_padding:10px;
-$btn_toolbar_group_spacing:10px;
-$btn_toolbar_group_vertical_spacing:10px;
+/* Toolbar */
+$toolbar_bgcolor: rgb(240, 240, 240) !default;
+$toolbar_gradient_top: lighten($toolbar_bgcolor, 3%) !default;
+$toolbar_gradient_bottom: darken($toolbar_bgcolor, 2%) !default;
+$toolbar_padding: 0.5em !default;
 
-/* Horizontal Spacer sizes */
-$btn_toolbar_spacer_mini:2px;
-$btn_toolbar_spacer_small:5px;
-$btn_toolbar_spacer_default:10px;
-$btn_toolbar_spacer_large:15px;
-$btn_toolbar_spacer_huge:20px;
+/* Buttons */
+$btn_margin: 0.25em !default;
 
-/* Horizontal Divider options */
-$btn_toolbar_divider_background_color:#fff;
-$btn_toolbar_divider_height:36px;
-$btn_toolbar_divider_width:2px;
+/* Spacer */
+$spacer_width: 1em !default;
 
-/* Vertical Spacer sizes */
-$btn_toolbar_spacer_vert_mini:2px;
-$btn_toolbar_spacer_vert_small:5px;
-$btn_toolbar_spacer_vert_default:10px;
-$btn_toolbar_spacer_vert_large:15px;
-$btn_toolbar_spacer_vert_huge:20px;
-
-/* Vertical Divider options */
-$btn_toolbar_divider_vert_background_color:#fff;
-$btn_toolbar_divider_vert_height:2px;
-$btn_toolbar_divider_vert_width:85%;
+/* Divider */
+$divider_bgcolor: rgba(60, 60, 60, 0.2) !default;
+$divider_width: 1px !default;

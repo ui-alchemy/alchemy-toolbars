@@ -1,117 +1,88 @@
 @import "_toolbars_vars";
 
-.btn-toolbar,
-.btn_toolbar {
-  background-color:$btn_toolbar_bgcolor;
-  padding:$btn_toolbar_padding;
+.toolbar,
+.btn-toolbar {
+  @include linear_gradient($toolbar_bgcolor, $toolbar_gradient_top, $toolbar_gradient_bottom);
+  padding: $toolbar_padding;
 
+  .btn,
+  .button,
+  button,
   .btn-group,
   .btn_group {
-    display:inline-block;
-    margin-right:$btn_toolbar_group_spacing;
-    white-space:nowrap;
+    margin: 0.25em;
+    float: left;
+  }
 
-    &:last-child {
-      margin-right:0;
+  .btn_group,
+  .btn-group {
+    .btn,
+    .button,
+    button {
+      margin: 0;
     }
   }
 
+  .pull_left,
   .pull-left {
-    float:left;
+    float: left;
   }
 
+  .pull_right,
   .pull-right {
-    float:right;
+    float: right;
   }
 
   .spacer {
-    display:inline-block;
-    height:15px;
-    width:$btn_toolbar_spacer_small;
-      
-    &.mini {
-      width:$btn_toolbar_spacer_mini;
-    }
-    &.small {
-      width:$btn_toolbar_spacer_small;
-    }
-    &.default {
-      width:$btn_toolbar_spacer_default;
-    }
-    &.large {
-      width:$btn_toolbar_spacer_large;
-    }
-    &.huge {
-      width:$btn_toolbar_spacer_huge;
-    }
+    display: block;
+    float: left;
+    width: $spacer_width;
+    height: 2em;
   }
+
   .divider {
-    background-color:$btn_toolbar_divider_background_color;
-    display:inline-block;
-    height:$btn_toolbar_divider_height;
-    width:$btn_toolbar_divider_width;
-    vertical-align:bottom;
+    display: block;
+    width: $divider_width;
+    height: 2em;
+    float: left;
+    margin: 0.45em $btn_margin $btn_margin $btn_margin;
+    background-color: $divider_bgcolor;
+    @include box-shadow(1px 1px  0 0 rgba($white_color, 0.7));
   }
 
-  &.btn-toolbar-vertical,
-  &.btn_toolbar_vertical {
-    display:inline-block;
-    width:auto;
+/* vertical toolbar */
+  &.vertical,
+  &.btn-toolbar-vertical {
+    display: inline-block;
+    width: auto;
 
+    .btn,
+    .button,
+    button,
     .btn-group,
     .btn_group {
-      display:block;
-      margin:0 0 $btn_toolbar_group_vertical_spacing 0;
-
-      &:last-child {
-        margin-bottom:0;
-      }
-      &:after {
-          clear: both;
-          content: "";
-          display: block;
-      }
+      display: block;
+      float: none;
     }
-  
+
     .spacer {
-      display:block;
-      height:$btn_toolbar_spacer_vert_default;
-      width:15px;
-      
-      &.mini {
-        height:$btn_toolbar_spacer_vert_mini;
-      }
-      &.small {
-        height:$btn_toolbar_spacer_vert_small;
-      }
-      &.default {
-        height:$btn_toolbar_spacer_vert_default;
-      }
-      &.large {
-        height:$btn_toolbar_spacer_vert_large;
-      }
-      &.huge {
-        height:$btn_toolbar_spacer_vert_huge;
-      }
-    }
-    .divider {
-      background-color:$btn_toolbar_divider_background_color;
-      display:block;
-      height:$btn_toolbar_divider_vert_height;
-      width:$btn_toolbar_divider_vert_width;
-      
-      &.centered {
-        margin:0 auto;
-      }
+      height: $spacer_width/2;
+      width: 100%;
+      float: none;
     }
 
+    .divider {
+      width: 80%;
+      height: $divider_width;
+      float: none;
+      margin: $btn_margin auto;
+    }
   }
 
+  // clear floating
   &:after {
     clear: both;
     content: "";
     display: block;
   }
 }
-
-@import "_toolbars_responsive";
